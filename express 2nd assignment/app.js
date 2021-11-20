@@ -57,7 +57,7 @@ const newUsers = users.map(user=>{
 })
 // delete the item 
 
-app.delete("/:id",(req,res)=>{
+app.delete("/Books/:id",(req,res)=>{
 
     console.log(req.params)
     const newUsers = users.filter((user)=> user.id !== +req.params.id);
@@ -69,7 +69,7 @@ app.delete("/:id",(req,res)=>{
 //     const newUsers = users.filter((user)=> user.author === req.params.author);
 //     res.send(newUsers);
 // })
-app.get("/:Books/:id",(req,res)=>{
+app.get("/Books/:id",(req,res)=>{
     console.log(req.params);
     var api_requested_by =req.name;
     var info="this will have your book ";
