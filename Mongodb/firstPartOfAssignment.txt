@@ -1,0 +1,637 @@
+> show dbs
+admin      0.000GB
+boxoffice  0.000GB
+config     0.000GB
+local      0.000GB
+> use boxoffice
+switched to db boxoffice
+> show collections
+movies
+> db.movies.find({})
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c7"), "id" : 1, "Movie_name" : "Lumina APV", "Movie_genre" : "Customer-focused", "Production_year" : 1993, "budget" : 13698 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c8"), "id" : 2, "Movie_name" : "Century", "Movie_genre" : "Multi-lateral", "Production_year" : 2007, "budget" : 10128 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c9"), "id" : 3, "Movie_name" : "Camry Hybrid", "Movie_genre" : "forecast", "Production_year" : 2001, "budget" : 19237 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ca"), "id" : 4, "Movie_name" : "Range Rover", "Movie_genre" : "adapter", "Production_year" : 2005, "budget" : 14510 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cb"), "id" : 5, "Movie_name" : "Aveo", "Movie_genre" : "Multi-tiered", "Production_year" : 2004, "budget" : 13156 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cc"), "id" : 6, "Movie_name" : "Forester", "Movie_genre" : "contingency", "Production_year" : 2013, "budget" : 13339 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cd"), "id" : 7, "Movie_name" : "Stratus", "Movie_genre" : "Mandatory", "Production_year" : 2016, "budget" : 16495 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ce"), "id" : 8, "Movie_name" : "E250", "Movie_genre" : "Quality-focused", "Production_year" : 2006, "budget" : 10954 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cf"), "id" : 9, "Movie_name" : "Elantra", "Movie_genre" : "Distributed", "Production_year" : 2016, "budget" : 13849 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d0"), "id" : 10, "Movie_name" : "Passat", "Movie_genre" : "Object-based", "Production_year" : 2015, "budget" : 10801 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d1"), "id" : 11, "Movie_name" : "Mountaineer", "Movie_genre" : "Function-based", "Production_year" : 1995, "budget" : 10064 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d2"), "id" : 12, "Movie_name" : "ES", "Movie_genre" : "asymmetric", "Production_year" : 2004, "budget" : 13000 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d3"), "id" : 13, "Movie_name" : "Town & Country", "Movie_genre" : "collaboration", "Production_year" : 2020, "budget" : 15854 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d4"), "id" : 14, "Movie_name" : "MKT", "Movie_genre" : "explicit", "Production_year" : 2013, "budget" : 10990 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d5"), "id" : 15, "Movie_name" : "Tundra", "Movie_genre" : "collaboration", "Production_year" : 2014, "budget" : 16213 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d6"), "id" : 16, "Movie_name" : "Cherokee", "Movie_genre" : "Networked", "Production_year" : 1994, "budget" : 14968 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d7"), "id" : 17, "Movie_name" : "Thunderbird", "Movie_genre" : "web-enabled", "Production_year" : 2011, "budget" : 18544 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d8"), "id" : 18, "Movie_name" : "Intrepid", "Movie_genre" : "context-sensitive", "Production_year" : 2008, "budget" : 17377 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d9"), "id" : 19, "Movie_name" : "745", "Movie_genre" : "24 hour", "Production_year" : 1998, "budget" : 15428 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351da"), "id" : 20, "Movie_name" : "i-370", "Movie_genre" : "Seamless", "Production_year" : 2003, "budget" : 17179 }
+Type "it" for more
+> db.movies.count()
+500
+> db.movies.find()
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c7"), "id" : 1, "Movie_name" : "Lumina APV", "Movie_genre" : "Customer-focused", "Production_year" : 1993, "budget" : 13698 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c8"), "id" : 2, "Movie_name" : "Century", "Movie_genre" : "Multi-lateral", "Production_year" : 2007, "budget" : 10128 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c9"), "id" : 3, "Movie_name" : "Camry Hybrid", "Movie_genre" : "forecast", "Production_year" : 2001, "budget" : 19237 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ca"), "id" : 4, "Movie_name" : "Range Rover", "Movie_genre" : "adapter", "Production_year" : 2005, "budget" : 14510 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cb"), "id" : 5, "Movie_name" : "Aveo", "Movie_genre" : "Multi-tiered", "Production_year" : 2004, "budget" : 13156 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cc"), "id" : 6, "Movie_name" : "Forester", "Movie_genre" : "contingency", "Production_year" : 2013, "budget" : 13339 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cd"), "id" : 7, "Movie_name" : "Stratus", "Movie_genre" : "Mandatory", "Production_year" : 2016, "budget" : 16495 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ce"), "id" : 8, "Movie_name" : "E250", "Movie_genre" : "Quality-focused", "Production_year" : 2006, "budget" : 10954 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cf"), "id" : 9, "Movie_name" : "Elantra", "Movie_genre" : "Distributed", "Production_year" : 2016, "budget" : 13849 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d0"), "id" : 10, "Movie_name" : "Passat", "Movie_genre" : "Object-based", "Production_year" : 2015, "budget" : 10801 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d1"), "id" : 11, "Movie_name" : "Mountaineer", "Movie_genre" : "Function-based", "Production_year" : 1995, "budget" : 10064 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d2"), "id" : 12, "Movie_name" : "ES", "Movie_genre" : "asymmetric", "Production_year" : 2004, "budget" : 13000 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d3"), "id" : 13, "Movie_name" : "Town & Country", "Movie_genre" : "collaboration", "Production_year" : 2020, "budget" : 15854 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d4"), "id" : 14, "Movie_name" : "MKT", "Movie_genre" : "explicit", "Production_year" : 2013, "budget" : 10990 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d5"), "id" : 15, "Movie_name" : "Tundra", "Movie_genre" : "collaboration", "Production_year" : 2014, "budget" : 16213 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d6"), "id" : 16, "Movie_name" : "Cherokee", "Movie_genre" : "Networked", "Production_year" : 1994, "budget" : 14968 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d7"), "id" : 17, "Movie_name" : "Thunderbird", "Movie_genre" : "web-enabled", "Production_year" : 2011, "budget" : 18544 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d8"), "id" : 18, "Movie_name" : "Intrepid", "Movie_genre" : "context-sensitive", "Production_year" : 2008, "budget" : 17377 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d9"), "id" : 19, "Movie_name" : "745", "Movie_genre" : "24 hour", "Production_year" : 1998, "budget" : 15428 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351da"), "id" : 20, "Movie_name" : "i-370", "Movie_genre" : "Seamless", "Production_year" : 2003, "budget" : 17179 }
+Type "it" for more
+> db.movies.find({"Movie_name":{$eq:"745"}}).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d9"),
+        "id" : 19,
+        "Movie_name" : "745",
+        "Movie_genre" : "24 hour",
+        "Production_year" : 1998,
+        "budget" : 15428
+}
+> db.movies.find({"Movie_name":{$ne:"745"}}).pretty().limit(10)
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Movie_genre" : "Customer-focused",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c8"),
+        "id" : 2,
+        "Movie_name" : "Century",
+        "Movie_genre" : "Multi-lateral",
+        "Production_year" : 2007,
+        "budget" : 10128
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cb"),
+        "id" : 5,
+        "Movie_name" : "Aveo",
+        "Movie_genre" : "Multi-tiered",
+        "Production_year" : 2004,
+        "budget" : 13156
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cc"),
+        "id" : 6,
+        "Movie_name" : "Forester",
+        "Movie_genre" : "contingency",
+        "Production_year" : 2013,
+        "budget" : 13339
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cd"),
+        "id" : 7,
+        "Movie_name" : "Stratus",
+        "Movie_genre" : "Mandatory",
+        "Production_year" : 2016,
+        "budget" : 16495
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ce"),
+        "id" : 8,
+        "Movie_name" : "E250",
+        "Movie_genre" : "Quality-focused",
+        "Production_year" : 2006,
+        "budget" : 10954
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cf"),
+        "id" : 9,
+        "Movie_name" : "Elantra",
+        "Movie_genre" : "Distributed",
+        "Production_year" : 2016,
+        "budget" : 13849
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d0"),
+        "id" : 10,
+        "Movie_name" : "Passat",
+        "Movie_genre" : "Object-based",
+        "Production_year" : 2015,
+        "budget" : 10801
+}
+> db.movies.find({"budget":{$gt:13000}}).pretty().limit(10)
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Movie_genre" : "Customer-focused",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cb"),
+        "id" : 5,
+        "Movie_name" : "Aveo",
+        "Movie_genre" : "Multi-tiered",
+        "Production_year" : 2004,
+        "budget" : 13156
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cc"),
+        "id" : 6,
+        "Movie_name" : "Forester",
+        "Movie_genre" : "contingency",
+        "Production_year" : 2013,
+        "budget" : 13339
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cd"),
+        "id" : 7,
+        "Movie_name" : "Stratus",
+        "Movie_genre" : "Mandatory",
+        "Production_year" : 2016,
+        "budget" : 16495
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cf"),
+        "id" : 9,
+        "Movie_name" : "Elantra",
+        "Movie_genre" : "Distributed",
+        "Production_year" : 2016,
+        "budget" : 13849
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d3"),
+        "id" : 13,
+        "Movie_name" : "Town & Country",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2020,
+        "budget" : 15854
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d5"),
+        "id" : 15,
+        "Movie_name" : "Tundra",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2014,
+        "budget" : 16213
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d6"),
+        "id" : 16,
+        "Movie_name" : "Cherokee",
+        "Movie_genre" : "Networked",
+        "Production_year" : 1994,
+        "budget" : 14968
+}
+> db.movies.find({"budget":{$gte:13000}}).pretty().limit(3)
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Movie_genre" : "Customer-focused",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+> db.movies.find({$and:[{"Production_year":{$gt:2000}},{"budget":{$gte:10000}}]}).limit(4).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c8"),
+        "id" : 2,
+        "Movie_name" : "Century",
+        "Movie_genre" : "Multi-lateral",
+        "Production_year" : 2007,
+        "budget" : 10128
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cb"),
+        "id" : 5,
+        "Movie_name" : "Aveo",
+        "Movie_genre" : "Multi-tiered",
+        "Production_year" : 2004,
+        "budget" : 13156
+}
+> db.movies.find({$or:[{"Production_year":{$gt:2000}},{"budget":{$gte:10000}}]}).limit(4).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Movie_genre" : "Customer-focused",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c8"),
+        "id" : 2,
+        "Movie_name" : "Century",
+        "Movie_genre" : "Multi-lateral",
+        "Production_year" : 2007,
+        "budget" : 10128
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+> db.movies.find({$nor:[{"Production_year":{$gt:2000}},{"budget":{$gte:10000}}]}).limit(4).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351f9"),
+        "id" : 51,
+        "Movie_name" : "GT",
+        "Movie_genre" : "toolset",
+        "Production_year" : 1997,
+        "budget" : 9252
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e3520b"),
+        "id" : 69,
+        "Movie_name" : "Vision",
+        "Movie_genre" : "solution",
+        "Production_year" : 1990,
+        "budget" : 9061
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e35237"),
+        "id" : 113,
+        "Movie_name" : "Sentra",
+        "Movie_genre" : "attitude-oriented",
+        "Production_year" : 1999,
+        "budget" : 9560
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e35242"),
+        "id" : 124,
+        "Movie_name" : "Corvette",
+        "Movie_genre" : "bandwidth-monitored",
+        "Production_year" : 1992,
+        "budget" : 9692
+}
+> db.movies.find({$nand:[{"Production_year":{$gt:2000}},{"budget":{$gte:10000}}]}).limit(4).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $nand. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({$or:[{"Production_year":{$lte:2000}},{"budget":{$lte:10000}}]}).limit(4).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Movie_genre" : "Customer-focused",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d1"),
+        "id" : 11,
+        "Movie_name" : "Mountaineer",
+        "Movie_genre" : "Function-based",
+        "Production_year" : 1995,
+        "budget" : 10064
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d6"),
+        "id" : 16,
+        "Movie_name" : "Cherokee",
+        "Movie_genre" : "Networked",
+        "Production_year" : 1994,
+        "budget" : 14968
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d9"),
+        "id" : 19,
+        "Movie_name" : "745",
+        "Movie_genre" : "24 hour",
+        "Production_year" : 1998,
+        "budget" : 15428
+}
+> db.movies.find({$and:[{"Production_year":{$lte:2010}},{"Production_year":{$gt:2000}}]}).limit(4).pretty()
+
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c8"),
+        "id" : 2,
+        "Movie_name" : "Century",
+        "Movie_genre" : "Multi-lateral",
+        "Production_year" : 2007,
+        "budget" : 10128
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Movie_genre" : "forecast",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Movie_genre" : "adapter",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cb"),
+        "id" : 5,
+        "Movie_name" : "Aveo",
+        "Movie_genre" : "Multi-tiered",
+        "Production_year" : 2004,
+        "budget" : 13156
+}
+db.movies.find({}).sort({"Production_year":-1,"Movie_name":1}).pretty().limit(5)
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e352e3"),
+        "id" : 285,
+        "Movie_name" : "370Z",
+        "Movie_genre" : "Advanced",
+        "Production_year" : 2020,
+        "budget" : 18295
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e3527d"),
+        "id" : 183,
+        "Movie_name" : "57",
+        "Movie_genre" : "access",
+        "Production_year" : 2020,
+        "budget" : 9650
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e35230"),
+        "id" : 106,
+        "Movie_name" : "Altima",
+        "Movie_genre" : "standardization",
+        "Production_year" : 2020,
+        "budget" : 17263
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e3535d"),
+        "id" : 407,
+        "Movie_name" : "Celica",
+        "Movie_genre" : "Grass-roots",
+        "Production_year" : 2020,
+        "budget" : 9252
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e3522c"),
+        "id" : 102,
+        "Movie_name" : "Classic",
+        "Movie_genre" : "global",
+        "Production_year" : 2020,
+        "budget" : 10289
+}
+ db.movies.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d1"),
+        "id" : 11,
+        "Movie_name" : "Mountaineer",
+        "Movie_genre" : "Function-based",
+        "Production_year" : 1995,
+        "budget" : 10064
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d2"),
+        "id" : 12,
+        "Movie_name" : "ES",
+        "Movie_genre" : "asymmetric",
+        "Production_year" : 2004,
+        "budget" : 13000
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d3"),
+        "id" : 13,
+        "Movie_name" : "Town & Country",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2020,
+        "budget" : 15854
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d4"),
+        "id" : 14,
+        "Movie_name" : "MKT",
+        "Movie_genre" : "explicit",
+        "Production_year" : 2013,
+        "budget" : 10990
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d5"),
+        "id" : 15,
+        "Movie_name" : "Tundra",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2014,
+        "budget" : 16213
+}
+db.movies.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d1"),
+        "id" : 11,
+        "Movie_name" : "Mountaineer",
+        "Movie_genre" : "Function-based",
+        "Production_year" : 1995,
+        "budget" : 10064
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d2"),
+        "id" : 12,
+        "Movie_name" : "ES",
+        "Movie_genre" : "asymmetric",
+        "Production_year" : 2004,
+        "budget" : 13000
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d3"),
+        "id" : 13,
+        "Movie_name" : "Town & Country",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2020,
+        "budget" : 15854
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d4"),
+        "id" : 14,
+        "Movie_name" : "MKT",
+        "Movie_genre" : "explicit",
+        "Production_year" : 2013,
+        "budget" : 10990
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d5"),
+        "id" : 15,
+        "Movie_name" : "Tundra",
+        "Movie_genre" : "collaboration",
+        "Production_year" : 2014,
+        "budget" : 16213
+}
+> db.movies.updateMany({}, { $unset : { "Movie_genre" : 1} }).skip(0).limit(10)
+uncaught exception: TypeError: db.movies.updateMany(...).skip is not a function :
+@(shell):1:1
+> db.movies.updateMany({}, { $unset : { "Movie_genre" : 1} }).limit(10)
+uncaught exception: TypeError: db.movies.updateMany(...).limit is not a function :
+@(shell):1:1
+> db.movies.updateMany({}, { $unset : { "Movie_genre" : 1} })
+{ "acknowledged" : true, "matchedCount" : 501, "modifiedCount" : 0 }
+> db.movies.find({}).limit(10)
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c7"), "id" : 1, "Movie_name" : "Lumina APV", "Production_year" : 1993, "budget" : 13698 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c8"), "id" : 2, "Movie_name" : "Century", "Production_year" : 2007, "budget" : 10128 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351c9"), "id" : 3, "Movie_name" : "Camry Hybrid", "Production_year" : 2001, "budget" : 19237 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ca"), "id" : 4, "Movie_name" : "Range Rover", "Production_year" : 2005, "budget" : 14510 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cb"), "id" : 5, "Movie_name" : "Aveo", "Production_year" : 2004, "budget" : 13156 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cc"), "id" : 6, "Movie_name" : "Forester", "Production_year" : 2013, "budget" : 13339 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cd"), "id" : 7, "Movie_name" : "Stratus", "Production_year" : 2016, "budget" : 16495 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351ce"), "id" : 8, "Movie_name" : "E250", "Production_year" : 2006, "budget" : 10954 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351cf"), "id" : 9, "Movie_name" : "Elantra", "Production_year" : 2016, "budget" : 13849 }
+{ "_id" : ObjectId("619d12f6dbed5af2c5e351d0"), "id" : 10, "Movie_name" : "Passat", "Production_year" : 2015, "budget" : 10801 }
+> db.movies.find({}).limit(10).pretty()
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c7"),
+        "id" : 1,
+        "Movie_name" : "Lumina APV",
+        "Production_year" : 1993,
+        "budget" : 13698
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c8"),
+        "id" : 2,
+        "Movie_name" : "Century",
+        "Production_year" : 2007,
+        "budget" : 10128
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351c9"),
+        "id" : 3,
+        "Movie_name" : "Camry Hybrid",
+        "Production_year" : 2001,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ca"),
+        "id" : 4,
+        "Movie_name" : "Range Rover",
+        "Production_year" : 2005,
+        "budget" : 14510
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cb"),
+        "id" : 5,
+        "Movie_name" : "Aveo",
+        "Production_year" : 2004,
+        "budget" : 13156
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cc"),
+        "id" : 6,
+        "Movie_name" : "Forester",
+        "Production_year" : 2013,
+        "budget" : 13339
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cd"),
+        "id" : 7,
+        "Movie_name" : "Stratus",
+        "Production_year" : 2016,
+        "budget" : 16495
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351ce"),
+        "id" : 8,
+        "Movie_name" : "E250",
+        "Production_year" : 2006,
+        "budget" : 10954
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351cf"),
+        "id" : 9,
+        "Movie_name" : "Elantra",
+        "Production_year" : 2016,
+        "budget" : 13849
+}
+{
+        "_id" : ObjectId("619d12f6dbed5af2c5e351d0"),
+        "id" : 10,
+        "Movie_name" : "Passat",
+        "Production_year" : 2015,
+        "budget" : 10801
+}
