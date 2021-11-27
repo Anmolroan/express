@@ -2,10 +2,10 @@
   "name": "mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "book.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon ./src/book.js"
+    "server": "nodemon src/server.js"
   },
   "author": "",
   "license": "ISC",
