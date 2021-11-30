@@ -9,7 +9,7 @@ const bookSchema =new mongoose.Schema({
     },
     author_id:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"author",
+        ref:"user",
         required:true,
     },
     checked_out:{type:String,default:"Not checkedOut"}

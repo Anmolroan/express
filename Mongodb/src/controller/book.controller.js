@@ -1,7 +1,8 @@
 // ------------Books Crud-------------------
 const express =require("express");
 const router =express.Router();
-const Book =require("../model/book.model")
+const Book =require("../model/book.model");
+const User =require("../model/user.model")
 router.post("",async (req,res)=>{
     try{
         const book =await Book.create(req.body);
@@ -12,7 +13,7 @@ router.post("",async (req,res)=>{
     });
     router.get("",async(req,res)=>{
         try{
-            const books = await Book.find().populate("section_id").populate("author _id").lean().exec();
+            const books = await Book.find().populate("section_id").populate("author_id").lean().exec();
             res.status(201).send(books)
         }catch(e){
             res.status(500).send({message:e.message,status:"Failed"})
