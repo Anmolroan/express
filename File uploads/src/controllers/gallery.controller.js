@@ -3,7 +3,7 @@ const router =express.Router();
 const Gallery =require("../models/gallery.model");
 const upload = require("../middlewarws/upload");
 const fs = require('fs')
-router.post("/multiple",upload.any("Images"),async(req,res)=>{
+router.post("/multiple",upload.any("pictures"),async(req,res)=>{
     const filePaths =req.files.map(file=>file.path)
     try{
         const gallery = await Gallery.create({
@@ -25,16 +25,22 @@ router.get("/",async(req,res)=>{
     }
 });
 
-router.delete("/:id",async(req,res)=>{
+router.delete("/:id",upload.any("pictures"),async(req,res)=>{
     try{
 
         const t=await Gallery.findById(req.params.id);
-        fs.unlinkSync(t.pictures)
+       
+        console.log(t.pictures)
         const gallery = await Gallery.findByIdAndDelete(req.params.id,{
             new:true
         });
-        
+        console.log(gallery);
+    const pics=t.pictures;
+    for(let i =0;i<pics.length;i++){
+         fs.unlinkSync(pics[i]);
    
+    }
+       
     res.status(201).send(gallery)
 }catch(e){
     return res.status(500).send({message:e.message,status:"Failed"})

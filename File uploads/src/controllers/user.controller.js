@@ -23,7 +23,7 @@ router.get("/",async(req,res)=>{
         return res.status(500).send({messge:e.message,status:"Failed"})
     }
 });
-router.patch("/:id",upload.single("image"),async(req,res)=>{
+router.patch("/:id",upload.single("profile_pic"),async(req,res)=>{
     try{
 
         const t=await User.findById(req.params.id);
