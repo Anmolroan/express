@@ -1,7 +1,9 @@
 const express=require("express");
 const router =express.Router();
 const User =require("../models/user.model");
-const sendMail =require("../utils/send_mail")
+const sendMail =require("../utils/send_mail");
+
+
 router.get("/",async(req,res)=>{
     try{
         const page =+req.query.page ||1
